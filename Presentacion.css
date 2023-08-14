@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&family=Playfair+Display&display=swap');
+
+* {
+    font-family: 'Oswald', sans-serif;
+    font-family: 'Playfair Display', serif;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: #031926;
+}
+
+.content-1{ /*Este estilo hace que el contenido de la pagina se comprima*/
+    padding: 150px;
+}
+
+header {
+    background:#243156 url(../img/bg.jpg) no-repeat
+    center top / cover fixed;
+    color:#fff;
+    text-align:center;
+}
+
+.navigation-bg{
+    padding: 35px;
+    -moz-box-shadow: 0px 5px 20px -1px rgba(0,0,0,0.73);
+     box-shadow: 0px 5px 20px -1px rgba(0,0,0,0.73);
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 6px;
+    padding: 30px;
+}
+  
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+  }
+
+
+  .flip-card-back {
+    padding: 30px;
+    text-align: center;
+    background-color: #468189;
+    color: white;
+    transform: rotateY(180deg);
+  }
+ 
+.grid{
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 0.5fr);
+    gap: 4rem;
+    margin: 20px;
+    padding: 30px;
+}
+
+.flip-card{
+    margin: 30px;
+}
+
+
+@media screen and (max-width: 980px){
+    #contenedor{
+        width: 90%;
+    }
+    #contenido{
+        width: 60%;
+    }
+    #barra_lateral{
+        width:30%;
+    }
+}
+
+@media screen and (max-width: 480px){
+    #encabezado{
+        height: auto;
+    }
+    #contenido{
+        width: auto;
+    }
+    #barra_lateral{
+        display:none;
+    }
+}

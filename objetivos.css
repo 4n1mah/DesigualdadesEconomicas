@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&family=Playfair+Display&display=swap');
+
+* {
+    font-family: 'Oswald', sans-serif;
+    font-family: 'Playfair Display', serif;
+    flex-direction: column;
+    box-sizing: border-box;
+    
+}
+
+
+body {
+    background-color: #031926;
+}
+
+.content-1{ /*Este estilo hace que el contenido de la pagina se comprima*/
+    padding: 150px;
+}
+
+header {
+    background:#243156 url(../img/bg.jpg) no-repeat
+    center top / cover fixed;
+    color:#fff;
+    text-align:center;
+}
+
+.navigation-bg{
+
+    padding: 25px;
+    -moz-box-shadow: 0px 5px 20px -1px rgba(0,0,0,0.73);
+     box-shadow: 0px 5px 20px -1px rgba(0,0,0,0.73);
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 6px;
+}
+
+h1{
+
+    text-align: center;
+    color: white;
+    
+}
+
+p{
+    text-align: center;
+    
+}
+
+.obj{
+    padding: 100px;
+    color: white;
+    margin: 50px;
+}
+
+img{
+    width: 600px;
+    height: 400px;
+}
+
+.image {
+    display: flex;
+    justify-content: center ;
+    align-items: center;   
+    height: 100vh; 
+}
+
+.image img{
+    padding: 5px;
+    max-width: auto!important;
+    min-height:auto !important;
+    border: 50px;
+    border-radius: 4%;
+}
+
+@media screen and (max-width: 980px){
+    #contenedor{
+        width: 90%;
+    }
+    #contenido{
+        width: 60%;
+    }
+    #barra_lateral{
+        width:30%;
+    }
+}
+

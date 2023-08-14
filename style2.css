@@ -1,0 +1,314 @@
+* {
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: #031926; 
+    transition: background-color 2s; 
+    height: 300vh;
+}
+
+
+.welcoming {
+    height: 70vh;
+    background-image: linear-gradient(#3300319a, #0d043db3), url("/fotos/welcome.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.tittle {
+    text-align: center;
+    line-height: 70vh;
+    font-size: 3rem;
+    color: #fff;
+}
+
+.content-1{
+    padding: 180px;
+}
+
+
+header {
+    background: #243156 url(../img/bg.jpg) no-repeat center top / cover fixed;
+    color: #fff;
+    text-align: center;
+}
+
+
+.navigation-bg{
+    padding: 25px;
+    box-shadow: 0px 5px 20px -1px rgba(0,0,0,0.73);
+    -moz-box-shadow: 0px 5px 20px -1px rgba(0,0,0,0.73);
+    box-shadow: 0px 5px 20px -1px rgba(0,0,0,0.73);
+
+    /* position: sticky; */
+    top: 0;
+
+}
+
+
+.xd{
+    text-decoration: none;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 6px;
+}
+
+
+.intro {
+    padding: 30px;
+    font-size: 1em;
+    text-align: justify;
+}
+
+
+#name {
+    color: black;
+}
+
+
+#title {
+    padding: 10px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    outline: auto;
+    outline-width: 10px;
+    background-color: white;
+}
+
+
+p {
+    text-align: center; 
+    font-size: 18px; 
+    line-height: 1.6;
+    text-align: justify; 
+    margin: 20px 0; 
+}
+
+
+p, ol {
+    padding-top: 15px;
+    font-size: 1.1em;
+    text-align: center;
+    margin: 20px;
+}
+
+
+ol {
+    list-style-type: decimal; 
+    margin-left: 40px; 
+}
+
+
+li {
+    margin: 10px 0; 
+    font-size: 1.1em; 
+    color: #333; 
+}
+
+
+h1 {
+    padding-top: 20px;
+    text-align: center;
+    color: white;
+    font-size: 60px;
+}
+
+
+h2{
+    text-align: center;
+    padding-top: 50px;
+    align-content: center;
+    font-size: 40px;
+    position: relative;
+}
+
+
+h2::after {
+    content: "";
+    display: block;
+    width: 50px; 
+    height: 2px; 
+    background-color: #333; 
+    position: absolute;
+    bottom: -10px; 
+    left: 50%;
+    transform: translateX(-50%); 
+}
+
+
+img {
+    padding: 10px; 
+    width: 600px;
+    height: 400px; 
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease-in-out; 
+}
+
+
+img:hover {
+    transform: scale(1.05); 
+}
+
+
+section {
+    padding: 10px;
+    margin-top: 30px;
+    margin-bottom: 80px;
+    outline: auto;
+    align-items: center;
+    background-color: white;
+}
+
+
+/* Estilos para secciones */
+section {
+    display: flex;
+    flex-direction: column; /* Cambia a estilo de columna */
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    padding: 30px; /* Aumenta el espacio alrededor del contenido */
+    margin-top: 60px; /* Aumenta el espacio entre secciones */
+    margin-bottom: 100px; /* Aumenta el espacio entre secciones */
+    outline: auto;
+    background-color: white;
+    text-align: center; /* Centra el contenido horizontalmente */
+}
+
+/* Estilos para imágenes dentro de las secciones */
+section img {
+    padding: 10px;
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Estilos para texto dentro de las secciones */
+section p {
+    padding: 10px;
+    text-align: justify;
+}
+
+/* Invertir el diseño para secciones con la clase "reverse" */
+section.reverse {
+    flex-direction: column-reverse; /* Invierte el orden de la columna */
+}
+
+.footer {
+  background-color: white;
+  padding: 10px;
+  text-align: center;
+  border-top: 1px solid #ccc;
+  bottom: 0;
+  width: 100%;
+}
+
+button {
+  width: 140px;
+  height: 56px;
+  overflow: hidden;
+  border: none;
+  color: black;
+  background: none;
+  position: relative;
+  padding-bottom: 2em;
+}
+
+button > div,button > svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+button:before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  background: currentColor;
+  transition: transform 0.25s ease-out;
+}
+
+button:hover:before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+button .clone > *,button .text > * {
+  opacity: 1;
+  font-size: 1.3rem;
+  transition: 0.2s;
+  margin-left: 4px;
+}
+
+button .clone > * {
+  transform: translateY(60px);
+}
+
+button:hover .clone > * {
+  opacity: 1;
+  transform: translateY(0px);
+  transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+}
+
+button:hover .text > * {
+  opacity: 1;
+  transform: translateY(-60px);
+  transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+}
+
+button:hover .clone > :nth-child(1) {
+  transition-delay: 0.15s;
+}
+
+button:hover .clone > :nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+button:hover .clone > :nth-child(3) {
+  transition-delay: 0.25s;
+}
+
+button:hover .clone > :nth-child(4) {
+  transition-delay: 0.3s;
+}
+/* icon style and hover */
+button svg {
+  width: 20px;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%) rotate(-50deg);
+  transition: 0.2s ease-out;
+}
+
+button:hover svg {
+  transform: translateY(-50%) rotate(-90deg);
+}
+
+/* Estilos generales para todos los dispositivos */
+
+/* Estilos para pantallas pequeñas (hasta 600px de ancho) */
+@media screen and (max-width: 600px) {
+  /* Aplica estilos específicos para pantallas pequeñas aquí */
+}
+
+/* Estilos para pantallas medianas (entre 601px y 992px de ancho) */
+@media screen and (min-width: 601px) and (max-width: 992px) {
+  /* Aplica estilos específicos para pantallas medianas aquí */
+}
+
+/* Estilos para pantallas grandes (más de 992px de ancho) */
+@media screen and (min-width: 993px) {
+  /* Aplica estilos específicos para pantallas grandes aquí */
+}
